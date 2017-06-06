@@ -1,0 +1,196 @@
+html {
+  font-size: 20px;
+  width: 100%; }
+
+/*
+width:px2rem(20px);*/
+.box {
+  width: 100%;
+  background: #f2f2f2; }
+
+header {
+  width: 100%;
+  height: 2rem;
+  background: #413342;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #fff;
+  top: 0;
+  left: 0; }
+
+.h2 {
+  width: 100%;
+  height: 4.5rem;
+  margin: 0.5rem 0; }
+  .h2 ul {
+    display: -webkit-box;
+    margin-bottom: 0.25rem; }
+    .h2 ul li {
+      -webkit-box-flex: 4; }
+      .h2 ul li a {
+        width: 4rem;
+        height: 2.15rem;
+        border: 0.05rem solid white;
+        background: #d0c5d1;
+        font-size: 0.6rem;
+        color: #413342;
+        line-height: 2.15rem;
+        text-align: center;
+        cursor: pointer;
+        margin-left: 0.3rem;
+        display: block; }
+
+.p {
+  width: 100%;
+  height: 2rem;
+  display: none; }
+
+section {
+  width: 100%;
+  height: 190rem;
+  background: #e2e2e0;
+  padding-top: 1rem; }
+  section div {
+    width: 18.05rem;
+    height: 18.05rem;
+    border: 0.025rem solid #cbcbcb;
+    border-radius: 0.5rem;
+    margin-left: 0.3rem;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 0.7rem; }
+    section div h2 {
+      margin-top: 0.6rem;
+      line-height: 1.1rem;
+      font-size: 0.7rem;
+      color: #333;
+      font-weight: bold; }
+    section div p {
+      color: #c4c4c4;
+      font-size: 0.5rem;
+      line-height: 1.1rem;
+      margin-bottom: 0.45rem; }
+    section div img {
+      margin-left: 0.25rem;
+      margin-bottom: 0.55rem;
+      width: 17.45rem;
+      height: 9.6rem; }
+    section div b {
+      width: 100%;
+      height: 0.1rem;
+      font-size: 0.1rem;
+      color: #666; }
+    section div span {
+      width: 100%;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      border-top: 0.1rem dashed #dbdbdb;
+      margin-top: 0.85rem;
+      display: block; }
+      section div span a {
+        font-size: 0.75rem;
+        color: #333; }
+      section div span i {
+        font-size: 0.4rem;
+        color: #ccc;
+        margin-left: 1.5rem; }
+
+.fot1 {
+  width: 100%;
+  height: 11.45rem;
+  text-align: center; }
+  .fot1 .fot2 {
+    margin-top: 1.35rem;
+    margin-left: 7.05rem;
+    margin-bottom: 0.25rem; }
+  .fot1 i {
+    font-size: 0.95rem;
+    color: #333; }
+  .fot1 span {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: bold; }
+  .fot1 h4 {
+    font-size: 0.75rem;
+    color: #b33b23;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    margin-bottom: 1.05rem; }
+  .fot1 p {
+    font-size: 0.75rem;
+    color: #555;
+    font-weight: bold; }
+
+.fot3 {
+  width: 18.15rem;
+  height: 1.8rem;
+  border-top: 0.05rem solid #cdcdcd;
+  border-bottom: 0.05rem solid #cdcdcd;
+  margin-left: 0.5rem; }
+  .fot3 p {
+    line-height: 1.8rem;
+    font-size: 0.7rem;
+    color: #181818; }
+  .fot3 img {
+    margin-left: 11.85rem; }
+
+.fot3 .fo1 {
+  margin-left: 10.35rem; }
+
+.fot4 {
+  width: 100%;
+  height: 7.55rem;
+  text-align: center; }
+  .fot4 a {
+    width: 17.05rem;
+    height: 2rem;
+    background: #980201;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    color: #f4e50c;
+    font-weight: bold;
+    display: block;
+    margin: 0.35rem 0.5rem 0 0.7rem;
+    border: 0.025rem solid #c0d3b7; }
+  .fot4 span {
+    margin-top: 1rem;
+    margin-right: 0.6rem;
+    font-size: 0.7rem;
+    color: #2d2d2d;
+    display: inline-block; }
+  .fot4 i {
+    margin-top: 1.05rem;
+    font-size: 0.55rem;
+    color: #0c0c0c;
+    font-weight: bold;
+    display: inline-block; }
+  .fot4 p {
+    color: #050505;
+    margin-top: 0.3rem;
+    font-size: 0.55rem;
+    cursor: pointer; }
+  .fot4 b {
+    color: #474747;
+    font-size: 0.7rem;
+    margin-top: 0.8rem;
+    line-height: 1rem;
+    display: inline-block; }
+
+.fot5 {
+  width: 100%;
+  height: 2.2rem;
+  display: -webkit-box;
+  border-top: 0.05rem solid #a1a3a6; }
+  .fot5 li {
+    width: 6.2rem;
+    height: 2.15rem;
+    -webkit-box-flex: 3;
+    border-right: 0.05rem solid silver; }
+    .fot5 li img {
+      margin-top: 0.55rem;
+      margin-left: 1.25rem; }
+    .fot5 li p {
+      margin-top: 0.7rem;
+      margin-left: 0.5rem; }

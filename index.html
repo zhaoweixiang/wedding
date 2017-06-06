@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0/no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>首页</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <script>
+        (function(){
+            function initFontSize(){
+                document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+            }
+            initFontSize();
+            window.addEventListener('resize',initFontSize,false);
+        })();
+		
+		document.addEventListener('DOMContentLoaded',function(ev){
+            var oUl=document.querySelector('#box ul');
+            var aLi=oUl.children;
+            var x=-aLi[0].offsetWidth;
+            var iNow=1;
+
+            oUl.addEventListener('touchstart',function(ev){
+
+                var downX=ev.targetTouches[0].pageX;
+                var disX=downX-x;
+                oUl.style.WebkitTransition='none';
+
+                function fnMove(ev){
+                    x=ev.targetTouches[0].pageX-disX;
+
+                    oUl.style.WebkitTransform='translateX('+x+'px)';
+                }
+
+                function fnEnd(ev){
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                    var upX=ev.changedTouches[0].pageX;
+
+                    if(Math.abs(upX-downX)>80){
+                        //到下一张
+                        if(downX>upX){
+                            iNow++;
+                        }else{
+                            iNow--;
+                        }
+                    }
+                    document.title=iNow;
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.WebkitTransition='.5s all ease';
+                    oUl.style.WebkitTransform='translate('+x+'px)';
+
+                    if(iNow==aLi.length-1){
+                        iNow=1;
+                        oUl.style.WebkitTransition='none';
+                    }
+                    if(iNow==0){
+                        iNow=aLi.length-2;
+                    }
+
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.WebkitTransform='translate3d('+x+'px,0,0)';
+                }
+
+                function end(){
+                    oUl.removeEventListener('transitionend',end,false);
+                    oUl.style.WebkitTransition='none';
+                    if(iNow==aLi.length-1){
+                        iNow=1;
+
+                    }
+                    if(iNow==0){
+                        iNow=aLi.length-2;
+                    }
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.WebkitTransform='translate3d('+x+'px,0,0)';
+                }
+
+                oUl.addEventListener('transitionend',end,false);
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+            },false);
+            ev.preventDefault();
+
+        },false);
+    </script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="box">
+        <header id="h">慕色婚纱摄影MUSESTUDIO</header>
+        <p class="p" id="p"></p>
+        <div class="h2">
+            <ul>
+                <li><a href="index.html">微首页</a></li>
+                <li><a href="html/xinzuo.html">最新作品</a></li>
+                <li><a href="html/According to the guest.html">客照展示</a></li>
+                <li><a href="html/Service Tips.html">服务贴士</a></li>
+            </ul>
+            <ul>
+                <li><a href="html/xinhuo.html">最新活动</a></li>
+                <li><a href="html/xintuan.html">最新团购</a></li>
+                <li><a href="html/About.html">关于慕色</a></li>
+                <li><a href="html/New theme.html">在线预约</a></li>
+            </ul>
+        </div>
+        <!-- 头 -->
+        <div id="box">
+        	<ul>
+            	<li><img src="images/xt1.jpg" alt="" class="c1"/></li>
+            	<li><img src="images/s1.jpg" alt="" class="c1"/></li>
+                <li><img src="images/10.jpg" alt="" class="c1"/></li>
+                <li><img src="images/xh3.jpg" alt="" class="c1"/></li>
+                <li><img src="images/6.jpg" alt="" class="c1"/></li>
+                <li><img src="images/4.jpg" alt="" class="c1"/></li>
+                <li><img src="images/xt1.jpg" alt="" class="c1"/></li>
+                <li><img src="images/s1.jpg" alt="" class="c1"/></li>
+            </ul>
+        </div>  
+        <section class="sec1">
+            <h2>作品展示</h2>
+            <ul>
+                <li>
+                    <img src="images/s7.jpg" alt="" />
+                    <p>二月客照</p>
+                </li>
+                <li>
+                    <img src="images/s8.jpg" alt="" />
+                    <p>二月客照</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="images/s9.jpg" alt="" />
+                    <p>一月客照(三)</p>
+                </li>
+                <li>
+                    <img src="images/s10.jpg" alt="" />
+                    <p>绿野仙踪客照</p>
+                </li>
+            </ul>
+        </section>
+        <section class="sec1">
+            <h2>客照分享</h2>
+            <ul>
+                <li>
+                    <img src="images/s3.jpg" alt="" />
+                    <p>《唯爱|||》系列</p>
+                </li>
+                <li>
+                    <img src="images/s4.jpg" alt="" />
+                    <p>全新《公主日记||》</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="images/s5.jpg" alt="" />
+                    <p>全新秘密花园</p>
+                </li>
+                <li>
+                    <img src="images/s6.jpg" alt="" />
+                    <p>全新《童话》系列</p>
+                </li>
+            </ul>
+        </section>
+        
+        <footer>
+            <div class="fot1">
+                <img src="images/s11.png" alt="" class="fot2"/>
+                <i>致电 韩国慕色</i>
+                <span>STUDlO</span>
+                <h4>400-6137-808</h4>
+                <p>KOREA MUSE STUDIO</p>
+            </div>
+            <div class="fot3 clearfix">
+                <p class="fl">每日客片速递</p>
+                <img src="images/s12.png" alt="" class="fr"/>
+            </div>
+            <div class="fot3 clearfix">
+                <p class="fl">全新主题作品发布</p>
+                <img src="images/s12.png" alt="" class="fr fo1"/>
+            </div>
+            <div class="fot4">
+                <a href="javascript:;">预约拍摄档期</a>
+                <span>客服电话</span>
+                <i>400-6137-808</i>
+                <p>结婚资讯 | 最新优惠 | 关于慕色</p>
+                <b>Copyright @ 2015 MUSESTUDIC<br />使用条款 | 免责声明及法律条款</b>
+            </div>
+            <ul class="fot5">
+                <li class="clearfix">
+                    <img src="images/s13.png" class="fl"/>
+                    <p class="fl">查询报价</p>
+                </li>
+                <li class="clearfix">
+                    <img src="images/s13.png" class="fl"/>
+                    <p class="fl">电话咨询</p>
+                </li>
+                <li class="clearfix">
+                    <img src="images/s13.png" class="fl"/>
+                    <p class="fl">在线咨询</p>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
